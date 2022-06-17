@@ -3,6 +3,7 @@ import Vue, { PluginObject, ComponentOptions, AsyncComponent } from 'vue'
 export declare interface VueJSModalOptions {
   componentName?: string
   dialog?: boolean
+  dialogComponentName?: string
   dynamicDefaults?: object
 }
 
@@ -13,6 +14,7 @@ declare interface VModal {
   show(
     component: typeof Vue | ComponentOptions<Vue> | AsyncComponent,
     componentProps?: object,
+    componentSlots?: object,
     modalProps?: object,
     modalEvents?: object
   ): void
